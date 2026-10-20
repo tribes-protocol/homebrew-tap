@@ -5,21 +5,21 @@
 class Zipbox < Formula
   desc "Drive Zipbox boxes from your terminal"
   homepage "https://zipbox.ai/docs/cli"
-  version "0.1.0"
+  version "0.1.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/tribes-protocol/zipbox-sdks/releases/download/v0.1.0/zipbox_darwin_amd64.tar.gz"
-      sha256 "5bf3ea048f9bcdb34bd144b9aed7cca20add15812c10605380e39733ce8aa21a"
+      url "https://github.com/tribes-protocol/zipbox-sdks/releases/download/v0.1.1/zipbox_darwin_amd64.tar.gz"
+      sha256 "485cd222358df3c4a142dc9bb65e7957ff420dadf7374f7332b250be65e3d7f9"
 
       define_method(:install) do
         bin.install "zipbox"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/tribes-protocol/zipbox-sdks/releases/download/v0.1.0/zipbox_darwin_arm64.tar.gz"
-      sha256 "b2ef5ae88538e3c0265f864d51b3a36ba638943325af0b240130fd8b7686ad74"
+      url "https://github.com/tribes-protocol/zipbox-sdks/releases/download/v0.1.1/zipbox_darwin_arm64.tar.gz"
+      sha256 "59e149f313627b0b7b303ab87f03cc8dacf181bdf7778a76040b9a0ab1449393"
 
       define_method(:install) do
         bin.install "zipbox"
@@ -29,15 +29,15 @@ class Zipbox < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tribes-protocol/zipbox-sdks/releases/download/v0.1.0/zipbox_linux_amd64.tar.gz"
-      sha256 "c73c785887af81e8816c1b9393fd29b2f9881aefdc6daab7e0c6d4f26c13f443"
+      url "https://github.com/tribes-protocol/zipbox-sdks/releases/download/v0.1.1/zipbox_linux_amd64.tar.gz"
+      sha256 "cfffb67eceb7c1ea28847e5b8bb4827222e1ca782715b6a9ac0c9317e1128ba4"
       define_method(:install) do
         bin.install "zipbox"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tribes-protocol/zipbox-sdks/releases/download/v0.1.0/zipbox_linux_arm64.tar.gz"
-      sha256 "476b7762bca99919b695aa18744f72cbc8675e842bf5a5ca1860dbc8c673d5c1"
+      url "https://github.com/tribes-protocol/zipbox-sdks/releases/download/v0.1.1/zipbox_linux_arm64.tar.gz"
+      sha256 "96b477f771eccc7ca0003ab88e43ade921036954545e14db26984bd49acfc38e"
       define_method(:install) do
         bin.install "zipbox"
       end
